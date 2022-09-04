@@ -12,7 +12,7 @@ import java.time.ZonedDateTime;
 @ControllerAdvice
 public class AppExceptionHandler extends ResponseEntityExceptionHandler {
 
-    @ExceptionHandler(MessagingException.class)
+    @ExceptionHandler({MessagingException.class, EmailSendingException.class})
     public ResponseEntity<AppResponse> handleMessagingException(MessagingException exception) {
         AppResponse response = new AppResponse(exception.getMessage(), ZonedDateTime.now(), HttpStatus.NOT_FOUND);
         return new ResponseEntity<>(response, HttpStatus.INTERNAL_SERVER_ERROR);
