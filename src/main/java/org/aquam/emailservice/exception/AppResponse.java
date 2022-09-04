@@ -2,15 +2,15 @@ package org.aquam.emailservice.exception;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 
 import java.time.ZonedDateTime;
 
 @Getter
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class AppResponse {
 
-    private String message;
-    private ZonedDateTime zonedDateTime;
-    private HttpStatus httpStatus;
+    private final String message;
+    private final HttpStatus httpStatus;
 }
