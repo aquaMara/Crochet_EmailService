@@ -3,7 +3,7 @@ package org.aquam.emailservice.service.impl;
 import lombok.RequiredArgsConstructor;
 import org.aquam.emailservice.model.ConfirmationData;
 import org.aquam.emailservice.service.EmailService;
-freimport org.slf4j.Logger;
+import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
